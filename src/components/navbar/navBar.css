@@ -9,3 +9,19 @@
   background-color: white;
   margin-bottom: 72px;
 }
+.Nav-text {
+  font-size: 40px;
+}
+h2 {
+  text-decoration: none;
+}
+.s {
+  text-decoration: none;
+  color: black;
+  font-size: 40px;
+}
+@media screen and (height: 560px) {
+  .Nav-bar {
+    font-size: 20px;
+  }
+}

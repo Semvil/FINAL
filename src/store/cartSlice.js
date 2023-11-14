@@ -52,7 +52,13 @@ const cartSlice = createSlice({
     decreaseItemQuantity: (state, action) => {
       state.cart = state.cart.map((item) => {
         if (item.id === action.payload) {
-          return { ...item, quantity: item.quantity - 1 };
+          return {
+            ...item,
+            quantity:
+              item.quantity > 0
+                ? item.quantity - 1
+                : item.id !== action.payload,
+          };
         }
         return item;
       });
